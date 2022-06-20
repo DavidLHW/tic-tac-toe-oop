@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+pipenv shell || \
+    echo "Unable to bring up virtual environment, is pipenv installed?"
+pipenv install -d || \
+    echo "Unable to install dependencies, is pipenv installed?"

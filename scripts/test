@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+pytest tests \
+  -s -v \
+  --no-cov-on-fail \
+  --cov-report term:skip-covered \
+  --cov-report term-missing \
+  --cov-report xml:test-results/cov.xml \
+  # --last-failed `# run last failed test only` \
+  # --exitfirst `# exit on first error` \
+  # --full-trace `# see full tracebacks` \
+  # -k <filename/classname/funcname> `# run specific tests` \
